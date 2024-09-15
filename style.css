@@ -1,0 +1,646 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Arial';
+}
+
+body{
+    background-color: rgba(242, 240, 240, 0.207);
+}
+
+#show-hide{
+    display:none ;
+}
+
+/*CSS Menu Nav Starts*/
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    padding: 5px 15px;
+    z-index: 999;
+}
+
+nav:hover{
+    box-shadow: 7px 1px 5px #c7c7c7;
+}
+
+.menu-logo{
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-logo span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu-logo .menu{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-logo .logo{
+    width: 4rem;
+    height: 4rem;
+}
+
+ a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-out;
+
+}
+
+a:hover{
+    color: #296D98;
+}
+
+.infoSup{
+    display: flex;
+    align-items: center;
+    margin-right: 8%;
+    gap: 100px;
+}
+
+.infoSup .about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.infoSup .nous-contacter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.toggle{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    background-color: #296D98;
+    height: 100vh;
+    z-index: 22;
+    left: -500px;
+    transition: .9s;
+    padding: 100px 10px 0px 25px;
+    gap: 25px;
+
+}
+
+.toggle a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease-out;
+    border-bottom: 1px solid white;
+}
+
+
+#show-hide:checked ~ .toggle{
+    left: 0px;
+}
+
+#show-hide:checked ~ #photo-sombre{
+    margin-left: 10%;
+}
+
+#show-hide:checked ~ .catalogue-container{
+    margin-right: 10%;
+}
+
+
+/*CSS Menu Nav Ends*/
+
+
+
+/*CSS MBackground Sombre Starts*/
+#photo-sombre{
+    position: relative;
+   background: url(./images/FondSombre.jpg) center/cover no-repeat;
+   width: 100%;
+   height: 80vh;
+   filter: brightness(30%);
+   transition: 1s;
+   margin-bottom: 30px;
+}
+
+.slogan{
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    position: absolute;
+    top: 300px;
+    left: 3.2%;
+    letter-spacing: 2px;
+}
+/*CSS MBackground Sombre Ends*/
+
+
+
+
+/*CSS Slider Starts*/
+.swiper {
+    width: min(600px,90%);
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .swiper-slide{
+    width: 100%;
+    height: 100%;
+  }
+  /*CSS Slider Ends*/
+  
+
+
+.space{
+    padding-bottom: 110px;
+}
+
+
+
+/*CSS Catalogue Hommes Starts*/
+.intro-catalogue{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    margin-left: 35%;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.intro-catalogue:hover{
+    box-shadow:  1px 2px 0px #bebebec4;
+}
+
+.catalogue-homme{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.intro-catalogue .homme{
+    font-size: 2rem;
+    color: #296D98;
+    letter-spacing: 1px;
+
+}
+
+.catalogue-container{
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    align-items: center;
+    justify-items: center;
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    transition: 1s ease;
+    margin-top: 40px;
+}
+
+.catalogue-container:hover{
+    box-shadow: 1px 0px 6px #bababa;
+}
+
+
+.modele-h1,.modele-h2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+}
+
+.modele-h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+}
+
+ .modele-h3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+ }
+
+
+
+.m1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.m1 p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.m1 .prix{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(155, 155, 155);
+}
+
+.m2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    height: 100%;
+}
+
+
+.m2 p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.m2 .prix{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(155, 155, 155);
+}
+
+
+
+
+
+
+
+
+
+
+
+.m3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.m3 p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.m3 .prix{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(155, 155, 155);
+}
+
+.m4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+    height: 100%;
+}
+
+
+.m4 p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.m4 .prix{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(155, 155, 155);
+}
+
+
+
+
+
+
+
+
+
+.m5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.m5 p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.m5 .prix{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(155, 155, 155);
+}
+
+.m6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    height: 100%;
+}
+
+
+.m6 p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.m6 .prix{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(155, 155, 155);
+}
+
+img:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+img{
+    transition: .3s;
+}
+
+
+
+
+#catalogueCH{
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+/*CSS Catalogue Hommes Starts*/
+
+
+/*CSS Video Starts*/
+
+.video{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px 15px;
+    width: 70%;
+    gap: 5px;
+}
+
+.v1{ width: 100%;
+    height: 100%;
+   
+
+}
+
+.v2{
+    width: 100%;
+    height: 100%;
+
+}
+
+/*CSS Video Ends*/
+
+/*A propos Starts*/
+
+#aboutUs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 10px 15px;
+
+
+}
+
+
+
+/*CSS Formulaire Starts*/
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 39%;
+    padding: 15px 10px;
+    gap: 10px;
+    margin: 0, auto;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 25px;
+}
+
+form:hover{
+    box-shadow: 2px -2px 4px #e7e7e7;
+}
+
+form img {
+    width: 5rem;
+    height: 5rem;
+}
+
+form input{
+    width: min(55%, 100%);
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #296D98;
+    border-radius: 12px;
+}
+
+#commentaire{
+    height: 100px;
+    width: min(60%, 100%);
+    padding: 10px 15px ;
+    overflow: auto;
+    resize: none;
+    outline: navajowhite;
+    border: 1px solid #296D98;
+    border-radius: 12px;
+}
+
+form button{
+    width: min(25%, 100%);
+    padding: 8px 8px;
+    background-color:  #296D98;
+    color: white;
+    letter-spacing: 1px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form button:hover{
+    transform: scale(1.1);
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 45px;
+    padding: 30px 0;
+    background-color: #ffffff;
+    gap: 30px
+}
+
+footer p{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+footer .reseaux{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a{
+    letter-spacing: 3px;
+}
+
+footer .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .mentionsLegales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: min(100%,100%);
+}
+
+footer .mentionsLegales .copy {
+    color: #296D98;
+}
+
+footer .mentionsLegales p{
+    font-size: 1rem;
+}
+
+footer .mentionsLegales a {
+    color: #296D98;
+    font-size: 1rem ;
+}
+
+
+
+
+#catalogueH{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px 10px 100px;
+    width: 95%;
+    margin: 0 auto;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+
+#catalogueH div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+#catalogueH img{
+   width: 100% ;
+}
+
+
+
+
+
+
+
+
+@media (max-width:660px){
+    a{
+        font-size: 0.8rem;
+    }
+
+     #catalogueCH{
+        font-size: 1rem;
+    }
+
+    .logo{
+        width: 20px;
+        height: 20px;
+    }
+
+    .slogan{
+        font-size: 2rem;
+        left: 50px;
+    }
+}
+
+@media (max-width:550px){
+    .prix{
+        font-size: 0.2rem;
+        background-color: white;
+        color: rgb(155, 155, 155);
+    }
+
+    
+}
